@@ -24,7 +24,7 @@ html {
 
 body {
   font-family: "Montserrat", sans-serif;
-  background: #4cc9f0;
+  background: #edf9fe;
 }
 
 .container {
@@ -252,8 +252,8 @@ header .header__container .header__right {
 }
 @media screen and (max-width: 620px) {
   header .header__container {
-    height: 60vh;
-    padding-top: 6rem;
+    height: 80vh;
+    padding-top: 8rem;
     flex-direction: column;
     gap: 0;
     align-items: center;
