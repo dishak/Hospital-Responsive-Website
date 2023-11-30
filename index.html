@@ -3,9 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Hospital Website using HTML JS SCSS</title>
+    <title>Responsive Hospital Website</title>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b2607e16e6.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script> -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./css/style.min.css">
 </head>
 <body>
-    
+    <!---------------------------------------------- Navbar start --------------------------------------->
+<nav>
+    <div class="container nav__container ">
+        <div class="nav__logo">
+            <a href="#"><h3>DISHA</h3></a>
+        </div>
+        <ul class="nav__menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#specialities">Specialities</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li class="btn"><a href="#appointment">Make Appointment</a></li>
+            
+        </ul>
+        <button id="nav__close-btn" ><i class="bx bx-x"></i></button>
+        <button id="nav__open-btn"><i class="bx bx-menu"></i></button>
+    </div>
+</nav>
+    <!---------------------------------------------- Navbar end --------------------------------------->
+
+    <!---------------------------------------------- Header start --------------------------------------->
+    <header>
+        <div class="container header__container">
+            <div class="header__left">
+                <h3>Complete Health Care Solutions For Everyone</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit eaque neque repudiandae, sunt temporibus a sapiente quod earum nobis quaerat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, libero.</p>
+
+                <a href="#appointment" class="btn">Make Appointment</a>
+            </div>
+            <div class="header__right">
+                <img src="./asset_images/header.svg" alt="">
+            </div>
+
+        </div>
+    </header>
+    <!---------------------------------------------- Header end --------------------------------------->
+<!-- js file -->
+<script src="main.js"></script>
 </body>
 </html>

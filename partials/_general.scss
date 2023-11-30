@@ -1,0 +1,83 @@
+html
+{
+  scroll-behavior: smooth;
+}
+body
+{
+  font-family: 'Montserrat', sans-serif;
+  background: $primary-color-variant;
+}
+.container
+{
+    width: $container-lg;
+    margin: 0 auto;
+}
+
+h1,h2,h3,h4,h5
+{
+    line-height: 1.2rem;
+}
+a
+{
+  text-decoration: none;
+}
+.section
+{
+   margin-top: 6rem;
+
+   & > h2
+   {
+     text-align: center;
+   }
+
+   &>p
+   {
+     text-align: center;
+     width: 45%;
+     margin: 0.6rem auto 2.6rem;
+   }
+}
+
+.btn
+{
+    @include button;
+}
+
+.btn-primary
+{
+    @include button($white-color,$primary-color);
+
+}
+
+// --------------------media queries medium devices-------------------------------------------------
+@media  screen and (max-width:1024px)
+{
+  .container
+{
+    width: $container-md;
+}
+
+.section
+{
+   &>p
+   {
+     width: 55%;
+   
+   }
+}
+}
+
+
+// --------------------media queries small devices-------------------------------------------------------
+@media  screen and (max-width:600px)
+{
+
+.section
+{
+   &>p
+   {
+     width:$container-md
+   
+   }
+}
+}

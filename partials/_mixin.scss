@@ -1,0 +1,44 @@
+
+@mixin button($textColor: $white-color , $backgroundColor: $secondary-color )
+{
+    display: inline-block;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border-radius: 0.4rem;
+    background: $backgroundColor;
+    color: $textColor;
+    cursor: pointer;
+    transition: all 400ms ease;
+
+    &:hover
+    {
+        background: lighten($color: $backgroundColor, $amount: 8%);
+        box-shadow: 0 1rem 1.6rem rgba($color: $black-color, $alpha: 0.15);
+    }
+}
+
+@mixin GradientBackground($start-color:$primary-color,$end-color:$primary-color-variant)
+{
+    background: linear-gradient(.25turn, $start-color, 60%, $end-color);
+   
+}
+
+// animation functionand its keyframe
+@mixin NavAnimation($duration,$delay)
+{
+    transform-origin: top center;
+    transform: scaleY(0);
+    animation: navanimate $duration linear $delay forwards ;
+}
+@keyframes navanimate {
+    0%
+    {
+      transform: rotateX(180deg);
+    //   transform: scaleY(0);
+    }
+    100%
+    {
+      transform: rotateX(0deg);
+      transform: scaleY(1);
+    }
+  }

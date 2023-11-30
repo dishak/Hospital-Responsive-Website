@@ -1,0 +1,136 @@
+header
+{
+    @include GradientBackground;
+    
+    .header__container
+    {
+        padding-top: 8rem;
+        display: flex;
+        gap: 2rem;
+        color: $white-color;
+        .header__left
+        {
+            margin: auto 0;
+            width:50%;
+            &>h3
+            {
+            
+                font-size: 2.5rem;
+                line-height: 3rem;
+                font-weight: 400;
+            }
+            &>p
+            {
+                margin-top: 2rem;
+            }
+            &>a
+            {
+                margin-top: 2rem;
+               text-align: center;
+                width: 60%;
+            }
+
+        }
+    
+        .header__right
+        {
+            margin: auto 0;
+            width:60%;
+
+        }
+    }
+ 
+
+}
+
+// ------------------------media queries for medium size start------------------------------------------
+
+@media screen and (max-width:1024px) {
+    header 
+    {
+
+    .header__container
+    {
+        height: 50vh;
+        justify-content: center;
+        .header__left
+        {
+
+            &>h3
+            {
+            
+                font-size: 1.5rem;
+                line-height: 2.3rem;
+                font-weight: 400;
+            }
+            &>p
+            {
+                margin-top: 1.5rem;
+            }
+            &>a
+            {
+                margin-top: 2rem;
+                text-align: center;
+                width: 70%;
+            }
+        }
+
+    }
+}
+
+}
+
+// ------------------------media queries for medium size end------------------------------------------
+
+
+// ------------------------media queries for small size start------------------------------------------
+@media screen and (max-width:620px) {
+    header 
+    {
+    .header__container
+    {
+     
+     
+        height: 60vh;
+        padding-top: 6rem;
+        flex-direction: column;
+        gap: 0;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        .header__left
+        {
+           
+            width: 100%;
+            &>h3
+            {
+            
+                font-size: 1.5rem;
+                line-height: 2rem;
+                font-weight: 400;
+                
+            }
+            &>p
+            {
+                margin-top: 1.5rem;
+            }
+            &>a
+            {
+                margin-top: 2rem;
+                text-align: center;
+                width: 70%;
+            }
+        }
+        .header__right
+        {
+           height: fit-content;
+      
+            width: 80%;
+        }
+
+    }
+}
+
+}
+
+// ------------------------media queries for small size end------------------------------------------

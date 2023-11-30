@@ -1,0 +1,118 @@
+nav {
+    height: 5rem;
+    width: 100vw;
+    position: fixed;
+    z-index: 10;
+    box-shadow: 2rem 1rem 1.6rem rgba(20, 20, 20, 0.4);
+    @include GradientBackground;
+ 
+    &.nav_color_change_onscroll
+    {
+        background: $white-color;
+        a
+        {
+            color: $black-color !important;
+            font-weight: 500;
+        }
+        button
+        {
+            color: $black-color !important;
+        }
+       
+        
+    }
+    .container {
+
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+
+        ul {
+            display: flex;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        a {
+            color: $white-color ;
+            
+            font-size: 400;
+        }
+
+        // not required in desktop view
+        button {
+            display: none;
+        }
+    }
+}
+
+// ------------------------media queries for medium size and small size ------------------------------------------
+
+@media screen and (max-width:1024px) {
+    nav {
+        .container {
+
+            button {
+                display: inline-block;
+                background: transparent;
+                font-size: 1.5rem;
+                cursor: pointer;
+                color: $white-color;
+                &#nav__close-btn {
+                    display: none;
+                }
+            }
+
+            ul {
+                position: fixed;
+                top: 5rem;
+                right: 4%;
+                flex-direction: column;
+                gap: 0;
+                display: none;
+                li {
+                    padding: 1rem;
+                    text-align: center;
+                    width: 100%;
+                    width: 12rem;
+                    @include GradientBackground(#5082cc,$primary-color-variant);
+                    box-shadow: 0rem 0.5rem 4rem gray;
+                    cursor: pointer;
+                    &.btn
+                    {
+                        @include button
+                    }
+                
+                }
+            
+                li:nth-child(1) {
+
+                    @include NavAnimation($animation-duration, 0ms)
+                }
+
+                li:nth-child(2) {
+
+
+                    @include NavAnimation($animation-duration, $animation-duration)
+                }
+
+                li:nth-child(3) {
+
+                    @include NavAnimation($animation-duration, 2*$animation-duration)
+                }
+
+                li:nth-child(4) {
+                    @include NavAnimation($animation-duration, 3*$animation-duration)
+                }
+
+                li:nth-child(5) {
+                    @include NavAnimation($animation-duration, 4*$animation-duration)
+                }
+            }
+        }
+    }
+
+}
+
